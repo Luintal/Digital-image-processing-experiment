@@ -844,9 +844,10 @@ void CMFCTest1View::OnTranReverseL()
 		return;
 	}
 	
-	int type;
+	int type, threshold;
+	threshold = dlgPara.m_thresholdRL;
 	type = 3;
-	Segmental2_Linear_Tran(lpSrcStartBits, lSrcWidth, lSrcHeight, type);
+	Segmental2_Linear_Tran(lpSrcStartBits, lSrcWidth, lSrcHeight, type, threshold);
 
 	//设置文档修改标志
 	pDoc->SetModifiedFlag(true);
@@ -890,9 +891,10 @@ void CMFCTest1View::OnTranL()
 		return;
 	}
 	
-	int type;
+	int type, threshold;
+	threshold = dlgPara.m_thresholdL;
 	type = 4;
-	Segmental2_Linear_Tran(lpSrcStartBits, lSrcWidth, lSrcHeight, type);
+	Segmental2_Linear_Tran(lpSrcStartBits, lSrcWidth, lSrcHeight, type, threshold);
 
 	//设置文档修改标志
 	pDoc->SetModifiedFlag(true);
